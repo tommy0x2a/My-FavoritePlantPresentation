@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Plant: Coast Live Oak • OH 121</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap");
+
+      :root {
+        --forest: #2e5a3c;
+      }
+
+      body {
+        font-family: "Source Sans 3", system_ui, sans-serif;
+      }
+
+      .heading-serif {
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 700;
+      }
+
+      .oak-hero {
+        background:
+          linear-gradient(rgba(46, 90, 60, 0.55), rgba(46, 90, 60, 0.35)),
+          url("harboTwinPeaks.JPG");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .section-header {
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-header:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60%;
+        height: 3px;
+        background: linear-gradient(to right, #2e5a3c, #4a7c59);
+        border-radius: 3px;
+      }
+
+      .plant-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .plant-card:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+
+      .nav-active {
+        color: #2e5a3c;
+        font-weight: 600;
+      }
+
+      .oak-leaf {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2230%22 height=%2230%22 fill=%22none%22%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M15 3C15 3 18 8 18 12C18 16 15 21 15 21C15 21 12 16 12 12C12 8 15 3 15 3Z%22 fill=%22%234a7c59%22/%3E%3C/svg%27");
+        background-size: 30px 30px;
+      }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-stone-800">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-x-3">
+            <div
+              class="w-10 h-10 bg-emerald-800 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-solid fa-tree text-white text-2xl"></i>
+            </div>
+            <div>
+              <span class="font-semibold text-2xl tracking-tight"
+                >My Favorite Plant</span
+              >
+              <span class="text-emerald-700 text-sm block -mt-1"
+                >OH 121 • Spring 2026</span
+              >
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+            <a href="#why-oak" class="hover:text-emerald-700 transition-colors"
+              >Why Oak?</a
+            >
+            <a
+              href="#description"
+              class="hover:text-emerald-700 transition-colors"
+              >The Plant</a
+            >
+            <a href="#care" class="hover:text-emerald-700 transition-colors"
+              >Growing Requirements</a
+            >
+            <a
+              href="#propagation"
+              class="hover:text-emerald-700 transition-colors"
+              >Propagation</a
+            >
+            <a href="#my-oaks" class="hover:text-emerald-700 transition-colors"
+              >My Oaks</a
+            >
+          </div>
+
+          <div class="flex items-center gap-x-3">
+            <div
+              class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-xs font-semibold flex items-center gap-x-1.5"
+            >
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Extra Credit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="oak-hero h-[620px] flex items-center relative">
+      <div class="max-w-4xl mx-auto px-6 text-white relative z-10">
+        <div class="max-w-2xl">
+          <div
+            class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-6"
+          >
+            <div
+              class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"
+            ></div>
+            <span class="text-sm font-medium tracking-[0.5px]"
+              >HARBISON CANYON • SAN DIEGO COUNTY</span
+            >
+          </div>
+
+          <h1
+            class="text-7xl leading-none font-bold tracking-tighter heading-serif mb-4"
+          >
+            Coast Live Oak<br />
+            <span class="text-emerald-300">Quercus agrifolia</span>
+          </h1>
+
+          <p class="max-w-md text-xl text-white/90">
+            My favorite plant — the living heart of the California landscape and
+            the silent witness to my daily walks.
+          </p>
+
+          <div class="flex items-center gap-x-4 mt-8">
+            <a
+              href="#why-oak"
+              class="inline-flex items-center justify-center px-8 py-3.5 bg-white text-emerald-800 hover:bg-emerald-100 font-semibold rounded-2xl transition-all active:scale-[0.985]"
+            >
+              Discover Why
+            </a>
+            <a
+              href="#my-oaks"
+              class="inline-flex items-center justify-center px-6 py-3.5 border border-white/40 hover:bg-white/10 text-white font-medium rounded-2xl transition-all"
+            >
+              See My Trees
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-8 right-8 text-white/60 text-xs flex items-center gap-x-1.5"
+      >
+        <i class="fa-solid fa-camera"></i>
+        <span>Photos from my property • 2026</span>
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 pt-12 pb-24">
+      <!-- Why This Plant -->
+      <div id="why-oak" class="mb-16">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <span
+              class="uppercase tracking-[1.5px] text-xs font-semibold text-emerald-600"
+              >WHY THIS PLANT?</span
+            >
+            <h2 class="text-4xl font-bold tracking-tight heading-serif">
+              The Quiet Giant of Harbison Canyon
+            </h2>
+          </div>
+          <div class="hidden md:block text-right">
+            <div class="text-5xl font-light text-emerald-700/30">01</div>
+          </div>
+        </div>
+
+        <div class="prose max-w-none text-[15px] text-stone-700">
+          <p class="lead">
+            There is something profoundly grounding about standing beneath an
+            oak tree. The dappled light, the rustle of leaves, the knowledge
+            that this tree has stood for decades — perhaps centuries — watching
+            the land change. In a world that moves too fast, oaks remind me to
+            slow down.
+          </p>
+
+          <p>
+            On my daily hikes through Harbison Canyon, I pass dozens of these
+            magnificent trees. Some I planted myself. Others were here long
+            before I arrived. Watching them thrive in our Mediterranean climate,
+            supporting an entire ecosystem of birds, insects, and mammals, fills
+            me with a quiet joy that no other plant quite matches.
+          </p>
+
+          <div
+            class="my-8 p-6 bg-white border border-stone-200 rounded-2xl flex flex-col md:flex-row gap-6"
+          >
+            <div class="flex-1">
+              <div
+                class="uppercase text-xs tracking-widest text-emerald-600 mb-2"
+              >
+                WHAT MAKES IT SPECIAL
+              </div>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start gap-x-3">
+                  <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                  <span>Deeply rooted in California identity and ecology</span>
+                </li>
+                <li class="flex items-start gap-x-3">
+                  <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                  <span
+                    >Provides critical habitat and food (acorns) for
+                    wildlife</span
+                  >
+                </li>
+                <li class="flex items-start gap-x-3">
+                  <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                  <span>Remarkably drought-tolerant once established</span>
+                </li>
+                <li class="flex items-start gap-x-3">
+                  <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                  <span
+                    >Personal connection — my first oak came from a beloved
+                    local nursery</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="flex-1 text-sm text-stone-600 border-t md:border-t-0 md:border-l border-stone-100 pt-6 md:pt-0 md:pl-6"
+            >
+              <p class="italic">
+                "The oak is the king of trees — strong, patient, and generous.
+                It gives shade in summer, acorns in fall, and shelter in winter.
+                To plant an oak is to plant a legacy."
+              </p>
+              <p class="mt-3 text-xs">
+                — Traditional saying adapted for California
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div id="description" class="mb-16">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <span
+              class="uppercase tracking-[1.5px] text-xs font-semibold text-emerald-600"
+              >THE PLANT</span
+            >
+            <h2 class="text-4xl font-bold tracking-tight heading-serif">
+              Coast Live Oak
+              <span class="font-normal text-emerald-700"
+                >(Quercus agrifolia)</span
+              >
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-x-8">
+          <div class="md:col-span-7">
+            <div class="prose max-w-none text-[15px]">
+              <p>
+                The Coast Live Oak is one of California’s most iconic and
+                beloved native trees. An evergreen member of the beech family
+                (Fagaceae), it is endemic to the state, ranging from Mendocino
+                County south to Baja California. It thrives in the Mediterranean
+                climate of coastal and foothill regions, including the San Diego
+                backcountry where I live.
+              </p>
+
+              <p class="mt-4">
+                In its natural form, it develops a broad, rounded canopy that
+                can span 30–40 feet, providing deep, cooling shade. The leaves
+                are dark green, leathery, and often have spiny or wavy margins —
+                a defense against herbivores. The acorns are elongated, light
+                brown, and mature in a single year (unlike many other oaks).
+              </p>
+
+              <div class="my-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                <div class="bg-white p-4 rounded-xl border border-stone-100">
+                  <div class="text-emerald-600 text-xs font-semibold mb-1">
+                    GROWTH HABIT
+                  </div>
+                  <div class="font-semibold">Evergreen tree or large shrub</div>
+                  <div class="text-xs text-stone-500 mt-1">
+                    25–45 ft tall × 30–40 ft wide
+                  </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-stone-100">
+                  <div class="text-emerald-600 text-xs font-semibold mb-1">
+                    LONGEVITY
+                  </div>
+                  <div class="font-semibold">200–300+ years</div>
+                  <div class="text-xs text-stone-500 mt-1">
+                    Some specimens 500+ years old
+                  </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-stone-100">
+                  <div class="text-emerald-600 text-xs font-semibold mb-1">
+                    WILDLIFE VALUE
+                  </div>
+                  <div class="font-semibold">Exceptional</div>
+                  <div class="text-xs text-stone-500 mt-1">
+                    Acorns feed 100+ species
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5 mt-8 md:mt-0">
+            <div
+              class="bg-white border border-stone-200 rounded-2xl p-5 text-sm"
+            >
+              <div
+                class="uppercase text-emerald-700 text-xs tracking-widest mb-3"
+              >
+                ALSO ON MY PROPERTY
+              </div>
+              <div class="space-y-3 text-stone-600">
+                <div class="flex items-center gap-x-3">
+                  <i class="fa-solid fa-leaf w-4 text-emerald-600"></i>
+                  <span
+                    ><strong>Scrub Oak</strong> (Quercus berberidifolia) —
+                    smaller, shrubby form</span
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <i class="fa-solid fa-leaf w-4 text-emerald-600"></i>
+                  <span
+                    ><strong>Interior Live Oak</strong> (Quercus wislizeni) —
+                    occasionally seen</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cultural Care -->
+      <div id="care" class="mb-16">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <span
+              class="uppercase tracking-[1.5px] text-xs font-semibold text-emerald-600"
+              >CULTURAL CARE</span
+            >
+            <h2 class="text-4xl font-bold tracking-tight heading-serif">
+              How to Grow Coast Live Oak Successfully
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-x-3 mb-3">
+                <i
+                  class="fa-solid fa-temperature-high text-xl text-emerald-600 w-5"
+                ></i>
+                <span class="font-semibold">Temperature &amp; Climate</span>
+              </div>
+              <p class="text-sm text-stone-600">
+                USDA Zones 8–10. Thrives in Mediterranean climates with hot, dry
+                summers and cool, wet winters. Tolerates occasional frost but
+                protect young trees from hard freezes. In San Diego County, it
+                excels in inland valleys like Harbison Canyon.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-x-3 mb-3">
+                <i class="fa-solid fa-sun text-xl text-amber-600 w-5"></i>
+                <span class="font-semibold">Exposure</span>
+              </div>
+              <p class="text-sm text-stone-600">
+                Full sun to partial shade. Young trees benefit from afternoon
+                shade in very hot inland areas. Mature trees prefer full sun for
+                best canopy development and acorn production.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-x-3 mb-3">
+                <i class="fa-solid fa-droplet text-xl text-sky-600 w-5"></i>
+                <span class="font-semibold">Watering</span>
+              </div>
+              <p class="text-sm text-stone-600">
+                Very low once established (after 3–5 years). Water deeply but
+                infrequently during the first few summers. Avoid summer
+                irrigation in mature trees — it can lead to root rot and oak
+                decline. Mulch heavily to retain moisture and keep roots cool.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-x-3 mb-3">
+                <i class="fa-solid fa-mountain text-xl text-amber-700 w-5"></i>
+                <span class="font-semibold">Soil</span>
+              </div>
+              <p class="text-sm text-stone-600">
+                Extremely adaptable. Prefers well-draining soils but tolerates
+                clay, sand, and decomposed granite (as seen with my first oak).
+                Slightly acidic to neutral pH is ideal. Avoid compacted or
+                poorly drained sites.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-x-3 mb-3">
+                <i class="fa-solid fa-flask text-xl text-violet-600 w-5"></i>
+                <span class="font-semibold">Nutrients</span>
+              </div>
+              <p class="text-sm text-stone-600">
+                Low fertility requirements. Excessive nitrogen promotes weak
+                growth and increases susceptibility to pests. A light
+                application of slow-release, low-nitrogen fertilizer in spring
+                is sufficient for young trees. Mature trees rarely need
+                supplemental feeding.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-x-3 mb-3">
+                <i class="fa-solid fa-scissors text-xl text-rose-600 w-5"></i>
+                <span class="font-semibold">Pruning &amp; Maintenance</span>
+              </div>
+              <p class="text-sm text-stone-600">
+                Prune in summer (July–September) to minimize disease risk.
+                Remove only dead, damaged, or crossing branches. Avoid heavy
+                pruning on mature trees. Keep the root zone (drip line + 50%)
+                free of turf, ivy, or aggressive groundcovers that compete for
+                water.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 p-5 bg-amber-50 border border-amber-200 rounded-2xl text-sm flex gap-x-4"
+        >
+          <i class="fa-solid fa-exclamation-triangle text-amber-600 mt-1"></i>
+          <div>
+            <span class="font-semibold text-amber-800">Important:</span>
+            <span class="text-amber-700"
+              >Avoid summer watering on established trees. Overwatering is one
+              of the leading causes of oak decline and Sudden Oak Death
+              susceptibility in California.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Propagation -->
+      <div id="propagation" class="mb-16">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <span
+              class="uppercase tracking-[1.5px] text-xs font-semibold text-emerald-600"
+              >PROPAGATION</span
+            >
+            <h2 class="text-4xl font-bold tracking-tight heading-serif">
+              Growing New Oaks: Methods Compared
+            </h2>
+          </div>
+        </div>
+
+        <div class="prose max-w-none mb-8 text-[15px]">
+          <p>
+            Oaks are primarily propagated by seed (acorns). While other methods
+            exist, they are rarely used for native species. Here is a complete
+            breakdown:
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Seed -->
+          <div class="bg-white border border-stone-200 rounded-2xl p-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="font-semibold flex items-center gap-x-2">
+                  <i class="fa-solid fa-seedling text-emerald-600"></i>
+                  <span>Seed (Acorn) Propagation — Primary Method</span>
+                </div>
+                <div
+                  class="text-xs uppercase tracking-widest text-emerald-600 mt-1"
+                >
+                  RECOMMENDED
+                </div>
+              </div>
+              <div
+                class="text-xs px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full font-medium"
+              >
+                Best Success
+              </div>
+            </div>
+
+            <div
+              class="mt-4 text-sm text-stone-600 grid md:grid-cols-2 gap-x-8"
+            >
+              <div>
+                <p class="font-medium text-stone-700 mb-1">How to do it:</p>
+                <ul class="list-disc pl-5 text-xs space-y-1">
+                  <li>
+                    Collect fresh acorns in fall (Sept–Oct for coast live oak)
+                    when they turn brown and drop easily.
+                  </li>
+                  <li>Float test: Discard floaters (damaged or non-viable).</li>
+                  <li>
+                    Direct sow 1–2 inches deep in prepared holes or 1-gallon
+                    containers.
+                  </li>
+                  <li>Protect from rodents with wire cages or mesh.</li>
+                  <li>
+                    Keep moist but not soggy until germination (2–8 weeks).
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-4 md:mt-0">
+                <p class="font-medium text-stone-700 mb-1">
+                  Benefits &amp; Drawbacks:
+                </p>
+                <div class="text-xs">
+                  <span class="font-semibold text-emerald-700">Benefits:</span>
+                  Highest success rate, genetic diversity, inexpensive,
+                  true-to-type if from local source.<br />
+                  <span class="font-semibold text-rose-700">Drawbacks:</span>
+                  Slow initial growth (first 3–5 years), predation risk,
+                  variable results from different mother trees.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <!-- Cuttings -->
+            <div
+              class="bg-white border border-stone-200 rounded-2xl p-6 text-sm"
+            >
+              <div class="font-semibold flex items-center gap-x-2 mb-2">
+                <i class="fa-solid fa-cut text-stone-400"></i>
+                <span>Semi-Hardwood Cuttings</span>
+              </div>
+              <div class="text-xs text-stone-500 mb-3">
+                Low success • Rarely used for natives
+              </div>
+              <div class="text-xs">
+                Take 6–8 inch cuttings in late summer from current season’s
+                growth. Use rooting hormone. High failure rate due to oak’s
+                difficulty rooting.
+                <span class="font-medium"
+                  >Best for: Cultivars or when seed is unavailable.</span
+                >
+              </div>
+            </div>
+
+            <!-- Grafting -->
+            <div
+              class="bg-white border border-stone-200 rounded-2xl p-6 text-sm"
+            >
+              <div class="font-semibold flex items-center gap-x-2 mb-2">
+                <i class="fa-solid fa-link text-stone-400"></i>
+                <span>Grafting / Budding</span>
+              </div>
+              <div class="text-xs text-stone-500 mb-3">
+                Moderate success • Used for specific cultivars
+              </div>
+              <div class="text-xs">
+                Chip budding or whip-and-tongue grafting onto seedling rootstock
+                in spring. Useful for named varieties but unnecessary for
+                straight species.
+                <span class="font-medium"
+                  >Best for: Selected cultivars with superior acorn production
+                  or form.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="text-xs text-stone-500 italic px-2">
+            Note: Division and air layering are not practical for oaks due to
+            their deep taproot systems and growth habit.
+          </div>
+        </div>
+      </div>
+
+      <!-- My Oaks on the Property -->
+      <div id="my-oaks" class="mb-16">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <span
+              class="uppercase tracking-[1.5px] text-xs font-semibold text-emerald-600"
+              >MY OAKS</span
+            >
+            <h2 class="text-4xl font-bold tracking-tight heading-serif">
+              Living History on My Land
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Oak 1 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm"
+          >
+            <div class="h-56 bg-stone-200 relative">
+              <img
+                src="_DSC0965.jpg"
+                class="w-full h-full object-cover"
+                alt="Shade seating under oak canopy next to patio"
+              />
+              <div
+                class="absolute bottom-3 right-3 bg-white/90 text-xs px-2.5 py-1 rounded font-medium"
+              >
+                Shade Seating Area
+              </div>
+            </div>
+            <div class="p-5 text-sm">
+              <div class="font-semibold">The Patio Oak</div>
+              <div class="text-xs text-emerald-600 mb-2">
+                First oak I planted • Bought at Simpson’s Nursery, Jamul
+              </div>
+              <p class="text-stone-600 text-xs">
+                This was my very first oak purchase. Simpson’s was a jewel of a
+                nursery in east county that carried rare plants and California
+                natives — and they gave customers delicious apples on the way
+                out. Sadly now closed. This tree has grown more slowly than
+                those in the swale, likely due to the heavily graded decomposed
+                granite slope and less access to groundwater.
+              </p>
+            </div>
+          </div>
+
+          <!-- Oak 2 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm"
+          >
+            <div class="h-56 bg-stone-200 relative">
+              <img
+                src="oakBelowStoneStairsAndHardscapePath.png"
+                class="w-full h-full object-cover"
+                alt="Oak canopy beneath hardscape path and granite stairs"
+              />
+              <div
+                class="absolute bottom-3 right-3 bg-white/90 text-xs px-2.5 py-1 rounded font-medium"
+              >
+                Under the Path
+              </div>
+            </div>
+            <div class="p-5 text-sm">
+              <div class="font-semibold">The Stairway Oak</div>
+              <div class="text-xs text-emerald-600 mb-2">
+                Natural placement • Stunning canopy
+              </div>
+              <p class="text-stone-600 text-xs">
+                This majestic oak sits directly beneath a hardscape pathway and
+                granite stone stairs. Its canopy creates a living tunnel that is
+                both functional and breathtaking. The tree has adapted
+                beautifully to the compacted soil and occasional foot traffic
+                above its root zone.
+              </p>
+            </div>
+          </div>
+
+          <!-- Oak 3 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm"
+          >
+            <div class="h-56 bg-stone-200 relative">
+              <img
+                src="oaksGrowingInSwale.png"
+                class="w-full h-full object-cover"
+                alt="Oaks growing in a swale surrounded by sugar bush and manzanita"
+              />
+              <div
+                class="absolute bottom-3 right-3 bg-white/90 text-xs px-2.5 py-1 rounded font-medium"
+              >
+                The Swale Oaks
+              </div>
+            </div>
+            <div class="p-5 text-sm">
+              <div class="font-semibold">The Swale Oaks</div>
+              <div class="text-xs text-emerald-600 mb-2">
+                Surrounded by sugar bush &amp; manzanita
+              </div>
+              <p class="text-stone-600 text-xs">
+                Two majestic oaks growing in a natural swale. I often wonder if
+                their roots reach into the seasonal water flow that moves
+                through the terrain after rains. The surrounding native sugar
+                bush (Rhus ovata) and manzanita create a beautiful,
+                drought-tolerant understory that thrives alongside the oaks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Oak 4 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm"
+          >
+            <div class="h-56 bg-stone-200 relative">
+              <img
+                src="scubOak.png"
+                class="w-full h-full object-cover"
+                alt="California native scrub oak with manzanita understory"
+              />
+              <div
+                class="absolute bottom-3 right-3 bg-white/90 text-xs px-2.5 py-1 rounded font-medium"
+              >
+                Scrub Oak + Manzanita
+              </div>
+            </div>
+            <div class="p-5 text-sm">
+              <div class="font-semibold">The Scrub Oak</div>
+              <div class="text-xs text-emerald-600 mb-2">
+                Quercus berberidifolia • Bottom 1/3 wrapped in manzanita
+              </div>
+              <p class="text-stone-600 text-xs">
+                One of the California native scrub oaks on the property. It is
+                smaller and more shrub-like than the coast live oaks. The bottom
+                third of the plant is densely surrounded by manzanita — a
+                classic chaparral plant community pairing that tells the story
+                of our local ecology.
+              </p>
+            </div>
+          </div>
+
+          <!-- Oak 5: First Oak from Simpson's -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm"
+          >
+            <div class="h-56 bg-stone-200 relative">
+              <img
+                src="firstOakIPutInBoughtFromSimpsonsNursuryInJamual.png"
+                class="w-full h-full object-cover"
+                alt="First oak planted from Simpson's Nursery in Jamul"
+              />
+              <div
+                class="absolute bottom-3 right-3 bg-white/90 text-xs px-2.5 py-1 rounded font-medium"
+              >
+                My Very First Oak
+              </div>
+            </div>
+            <div class="p-5 text-sm">
+              <div class="font-semibold">The First Oak</div>
+              <div class="text-xs text-emerald-600 mb-2">
+                Bought at Simpson’s Nursery, Jamul (now closed)
+              </div>
+              <p class="text-stone-600 text-xs">
+                This was my very first oak purchase. Simpson’s was a jewel of a
+                nursery in east county that carried rare plants and California
+                natives — and they gave customers delicious apples on the way
+                out. Sadly now closed. This tree has grown more slowly than
+                those in the swale, likely due to the heavily graded decomposed
+                granite slope and less access to groundwater.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Story -->
+        <div
+          class="mt-6 bg-gradient-to-br from-emerald-900 to-emerald-800 text-white rounded-3xl p-8 md:p-10"
+        >
+          <div class="max-w-2xl">
+            <div class="uppercase tracking-[1px] text-emerald-400 text-xs mb-2">
+              THE LIFE CYCLE OF THE FOREST
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">
+              Oak Growing Under Pine — A Story of Succession
+            </h3>
+            <div class="text-emerald-100 text-[15px] space-y-4">
+              <img
+                src="oakGrowingUnderPine.jpg"
+                class="w-full rounded-xl mb-4 shadow-lg"
+                alt="Oak growing under pine tree with bird-dispersed acorn story"
+              />
+
+              <p>
+                One of the most fascinating oaks on the property grows directly
+                beneath a softwood pine tree. This is not accidental — it is the
+                result of an ancient partnership.
+              </p>
+
+              <p>
+                Birds love oak acorns. They carry them away, but often drop or
+                cache them. As the acorn passes through a bird’s digestive
+                system, the hard shell is scored and weakened. When the bird
+                defecates while perched in the pine tree, the prepared acorn
+                lands in the perfect spot — shaded, protected, and enriched by
+                the pine’s litter.
+              </p>
+
+              <p>
+                Over time, the young oak grows stronger. Its hardwood nature
+                gives it a competitive advantage. Eventually, the oak will
+                overtop and outcompete the pine, claiming the spot for itself.
+                This is the beautiful, patient cycle of the California forest:
+                softwood gives way to hardwood, and the landscape slowly
+                transforms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conclusion -->
+      <div
+        class="bg-white border border-emerald-100 rounded-3xl p-9 text-center max-w-3xl mx-auto"
+      >
+        <div
+          class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6"
+        >
+          <i class="fa-solid fa-heart text-emerald-600 text-3xl"></i>
+        </div>
+
+        <h3 class="text-2xl font-semibold mb-3">
+          Why I Will Always Choose Oak
+        </h3>
+        <p class="text-stone-600 max-w-md mx-auto">
+          Oaks are not fast, but they are forever. They teach patience, provide
+          shelter, feed the wild, and connect me to the land in a way no other
+          plant can. Every acorn I plant is an act of hope for the next
+          generation.
+        </p>
+
+        <div
+          class="mt-8 text-xs text-emerald-700 font-medium flex items-center justify-center gap-x-2"
+        >
+          <i class="fa-solid fa-globe"></i>
+          <span>PLANT AN OAK. LEAVE A LEGACY.</span>
+        </div>
+      </div>
+
+      <!-- References -->
+      <div class="mt-16 text-xs text-stone-500 border-t border-stone-200 pt-6">
+        <div class="font-medium mb-2 text-stone-600">
+          References &amp; Further Reading
+        </div>
+        <div class="grid md:grid-cols-2 gap-x-8 text-[10px] leading-snug">
+          <div>
+            • Calscape.org — Quercus agrifolia (Coast Live Oak)<br />
+            • USDA Plant Guide — Coast Live Oak (Quercus agrifolia)<br />
+            • California Native Plant Society (CNPS) — Oak Care Guidelines<br />
+            • UCANR / UC Oaks — Care of Native Oaks in California
+          </div>
+          <div>
+            • Native Plant Network — Propagation Protocol for Quercus
+            agrifolia<br />
+            • California Oak Foundation — Bulletin on Care of California’s
+            Native Oaks<br />
+            • Personal observation and documentation from Harbison Canyon, San
+            Diego County (2023–2026)
+          </div>
+        </div>
+        <div class="mt-4 text-[10px]">
+          All photographs are original and taken on the author’s property in
+          Harbison Canyon, San Diego County, California.
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-emerald-900 text-emerald-200 text-xs py-6">
+      <div
+        class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-3"
+      >
+        <div>
+          Submitted for OH 121 • My Favorite Plant Project • Spring 2026
+        </div>
+        <div class="flex items-center gap-x-4">
+          <a href="#" class="hover:text-white transition-colors"
+            >Download PDF</a
+          >
+          <span class="text-emerald-700">|</span>
+          <span>Tommy 0x2a • Harbison Canyon, CA</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+```
