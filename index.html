@@ -34,41 +34,17 @@
         background-attachment: fixed;
       }
 
-      .section-header {
-        position: relative;
-        display: inline-block;
+      .modal {
+        animation: fadeIn 0.2s ease-out;
       }
 
-      .section-header:after {
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        width: 60%;
-        height: 3px;
-        background: linear-gradient(to right, #2e5a3c, #4a7c59);
-        border-radius: 3px;
-      }
-
-      .plant-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .plant-card:hover {
-        transform: translateY(-4px);
-        box-shadow:
-          0 20px 25px -5px rgb(0 0 0 / 0.1),
-          0 8px 10px -6px rgb(0 0 0 / 0.1);
-      }
-
-      .nav-active {
-        color: #2e5a3c;
-        font-weight: 600;
-      }
-
-      .oak-leaf {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2230%22 height=%2230%22 fill=%22none%22%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M15 3C15 3 18 8 18 12C18 16 15 21 15 21C15 21 12 16 12 12C12 8 15 3 15 3Z%22 fill=%22%234a7c59%22/%3E%3C/svg%27");
-        background-size: 30px 30px;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>
@@ -121,7 +97,7 @@
             >
               <a
                 href="https://tommy0x2a.github.io/TomzEliminator/"
-                class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-xs font-semibold flex items-center gap-x-1.5"
+                class="flex items-center gap-x-1.5"
               >
                 <i class="fa-solid fa-check-circle"></i>
                 <span>Eliminator</span>
@@ -183,19 +159,49 @@
         <span>Photos from my property • 2026</span>
       </div>
     </div>
+
     <!-- Presentation Intro -->
-    <div class="max-w-2xl mx-auto">
-      <div class="text-center mt-3">
+    <div class="max-w-5xl mx-auto px-6 pt-8 pb-12">
+      <div class="flex justify-center">
         <a
           href="https://x.com/tommy0x2a/status/2014795414734832062/video/1"
           target="_blank"
-          class="inline-flex items-center gap-x-2 text-emerald-600 hover:text-emerald-700 text-sm font-medium"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-x-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-2xl shadow-lg transition-all active:scale-[0.985]"
         >
-          <i class="fa-brands fa-x-twitter"></i>
-          <span>PRESENTATION INTRO</span>
+          <i class="fa-brands fa-x-twitter text-xl"></i>
+          <span>▶ PRESENTATION INTRO</span>
         </a>
       </div>
     </div>
+
+    <!-- Video Modal -->
+    <div
+      id="videoModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-90 z-[100] flex items-center justify-center p-4"
+    >
+      <div class="relative w-full max-w-5xl">
+        <!-- Close button -->
+        <button
+          onclick="closeVideoModal()"
+          class="absolute -top-12 right-0 text-white text-3xl hover:text-emerald-400 transition-colors z-10"
+        >
+          <i class="fa-solid fa-times"></i>
+        </button>
+
+        <!-- Video Container -->
+        <div class="bg-black rounded-2xl overflow-hidden shadow-2xl">
+          <blockquote class="twitter-tweet" data-theme="dark" style="margin: 0">
+            <a href="https://x.com/tommy0x2a/status/2014795414734832062"></a>
+          </blockquote>
+        </div>
+
+        <p class="text-center text-white/60 text-sm mt-3">
+          Press ESC or click outside to close
+        </p>
+      </div>
+    </div>
+
     <div class="max-w-5xl mx-auto px-6 pt-12 pb-24">
       <!-- Why This Plant -->
       <div id="why-oak" class="mb-16">
@@ -930,5 +936,46 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Video Modal Functions
+      function openVideoModal() {
+        const modal = document.getElementById("videoModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeVideoModal() {
+        const modal = document.getElementById("videoModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+
+      // Close modal when clicking outside
+      document
+        .getElementById("videoModal")
+        .addEventListener("click", function (e) {
+          if (e.target.id === "videoModal") {
+            closeVideoModal();
+          }
+        });
+
+      // Close modal with ESC key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const modal = document.getElementById("videoModal");
+          if (!modal.classList.contains("hidden")) {
+            closeVideoModal();
+          }
+        }
+      });
+    </script>
+
+    <!-- Twitter/X Embed Script -->
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
   </body>
 </html>
