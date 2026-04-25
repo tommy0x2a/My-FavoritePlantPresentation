@@ -989,7 +989,7 @@
     />
 
     <script>
-      // Hang Glider Cursor Follower
+      // Hang Glider Cursor Follower with direction facing
       (function () {
         const glider = document.getElementById("hangGlider");
         if (!glider) return;
@@ -999,19 +999,27 @@
         let currentX = mouseX;
         let currentY = mouseY;
         let lastX = mouseX;
+        let direction = 1; // 1 = right, -1 = left
 
         function animateGlider() {
           const lerp = 0.15;
           currentX = currentX + (mouseX - currentX) * lerp;
           currentY = currentY + (mouseY - currentY) * lerp;
 
+          // Calculate direction
+          const deltaX = mouseX - lastX;
+          if (Math.abs(deltaX) > 0.5) {
+            direction = deltaX > 0 ? 1 : -1;
+          }
+
           // Tilt based on horizontal speed
-          const tilt = (mouseX - lastX) * 0.9;
+          const tilt = deltaX * 0.9;
           const clampedTilt = Math.max(-22, Math.min(22, tilt));
 
+          // Apply position + direction flip + tilt
           glider.style.left = `${currentX - 80}px`;
           glider.style.top = `${currentY - 40}px`;
-          glider.style.transform = `rotate(${clampedTilt}deg)`;
+          glider.style.transform = `scaleX(${direction}) rotate(${clampedTilt}deg)`;
 
           lastX = mouseX;
           requestAnimationFrame(animateGlider);
@@ -1041,8 +1049,8 @@
         let bob = 0;
         setInterval(() => {
           bob = Math.sin(Date.now() / 400) * 2.5;
-          if (glider.style.transform.includes("rotate")) {
-            const current = glider.style.transform;
+          const current = glider.style.transform || "";
+          if (current.includes("rotate")) {
             glider.style.transform =
               current.replace(/translateY\([^)]*\)/, "") +
               ` translateY(${bob}px)`;
