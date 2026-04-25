@@ -804,7 +804,8 @@
                 Bought at Simpson’s Nursery, Jamul (now closed)
               </div>
               <p class="text-stone-600 text-xs">
-                This was my very first oak purchase. Simpson’s was a jewel of a
+                This was my very first oak purchase surrounded by olive trees,
+                all bought at Simpson’s Nursery. Simpson’s was a jewel of a
                 nursery in east county that carried rare plants and California
                 natives — and they gave customers delicious apples on the way
                 out. Sadly now closed. This tree has grown more slowly than
@@ -971,6 +972,86 @@
       });
     </script>
 
+    <!-- Hang Glider Cursor -->
+    <img
+      id="hangGlider"
+      src="hang_glider_PNG10.png"
+      style="
+        position: fixed;
+        width: 160px;
+        height: auto;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.08s ease-out;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
+      "
+      alt="Hang Glider"
+    />
+
+    <script>
+      // Hang Glider Cursor Follower
+      (function () {
+        const glider = document.getElementById("hangGlider");
+        if (!glider) return;
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let currentX = mouseX;
+        let currentY = mouseY;
+        let lastX = mouseX;
+
+        function animateGlider() {
+          const lerp = 0.15;
+          currentX = currentX + (mouseX - currentX) * lerp;
+          currentY = currentY + (mouseY - currentY) * lerp;
+
+          // Tilt based on horizontal speed
+          const tilt = (mouseX - lastX) * 0.9;
+          const clampedTilt = Math.max(-22, Math.min(22, tilt));
+
+          glider.style.left = `${currentX - 80}px`;
+          glider.style.top = `${currentY - 40}px`;
+          glider.style.transform = `rotate(${clampedTilt}deg)`;
+
+          lastX = mouseX;
+          requestAnimationFrame(animateGlider);
+        }
+
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        // Touch support
+        document.addEventListener(
+          "touchmove",
+          (e) => {
+            if (e.touches.length > 0) {
+              mouseX = e.touches[0].clientX;
+              mouseY = e.touches[0].clientY;
+            }
+          },
+          { passive: true },
+        );
+
+        // Start animation
+        animateGlider();
+
+        // Subtle floating bob
+        let bob = 0;
+        setInterval(() => {
+          bob = Math.sin(Date.now() / 400) * 2.5;
+          if (glider.style.transform.includes("rotate")) {
+            const current = glider.style.transform;
+            glider.style.transform =
+              current.replace(/translateY\([^)]*\)/, "") +
+              ` translateY(${bob}px)`;
+          } else {
+            glider.style.transform = `translateY(${bob}px)`;
+          }
+        }, 60);
+      })();
+    </script>
     <!-- Twitter/X Embed Script -->
     <script
       async
