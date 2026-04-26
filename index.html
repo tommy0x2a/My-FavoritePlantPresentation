@@ -34,6 +34,15 @@
         background-attachment: fixed;
       }
 
+      /* Fix for printing the hero background */
+      @media print {
+        .oak-hero {
+          background-attachment: scroll !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+
       .modal {
         animation: fadeIn 0.2s ease-out;
       }
@@ -215,6 +224,9 @@
               The Quiet Giant of Harbison Canyon
             </h2>
           </div>
+          <div class="hidden md:block text-right">
+            <div class="text-5xl font-light text-emerald-700/30">01</div>
+          </div>
         </div>
 
         <div class="prose max-w-none text-[15px] text-stone-700">
@@ -304,52 +316,25 @@
         <div class="grid md:grid-cols-12 gap-x-8">
           <div class="md:col-span-7">
             <div class="prose max-w-none text-[15px]">
-              <p>
-                The Coast Live Oak is one of California’s most iconic and
-                beloved native trees. An evergreen member of the beech family
-                (Fagaceae), it is endemic to the state, ranging from Mendocino
-                County south to Baja California (Calscape, 2026; USDA NRCS,
-                2026). It thrives in the Mediterranean climate of coastal and
-                foothill regions, including the San Diego backcountry where I
-                live.
-              </p>
+              <p>The Coast Live Oak is one of California’s most iconic and beloved native trees. An evergreen member of the beech family (Fagaceae), it is endemic to the state, ranging from Mendocino County south to Baja California (Calscape, 2026; USDA NRCS, 2026). It thrives in the Mediterranean climate of coastal and foothill regions, including the San Diego backcountry where I live.</p>
 
-              <p class="mt-4">
-                In its natural form, it develops a broad, rounded canopy that
-                can span 30–40 feet, providing deep, cooling shade (Calscape,
-                2026). The leaves are dark green, leathery, and often have spiny
-                or wavy margins — a defense against herbivores. The acorns are
-                elongated, light brown, and mature in a single year (unlike many
-                other oaks) (Nixon, 2002).
-              </p>
+              <p class="mt-4">In its natural form, it develops a broad, rounded canopy that can span 30–40 feet, providing deep, cooling shade (Calscape, 2026). The leaves are dark green, leathery, and often have spiny or wavy margins — a defense against herbivores. The acorns are elongated, light brown, and mature in a single year (unlike many other oaks) (Nixon, 2002).</p>
 
               <div class="my-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                 <div class="bg-white p-4 rounded-xl border border-stone-100">
-                  <div class="text-emerald-600 text-xs font-semibold mb-1">
-                    GROWTH HABIT
-                  </div>
+                  <div class="text-emerald-600 text-xs font-semibold mb-1">GROWTH HABIT</div>
                   <div class="font-semibold">Evergreen tree or large shrub</div>
-                  <div class="text-xs text-stone-500 mt-1">
-                    25–45 ft tall × 30–40 ft wide (Calscape, 2026)
-                  </div>
+                  <div class="text-xs text-stone-500 mt-1">25–45 ft tall × 30–40 ft wide (Calscape, 2026)</div>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-stone-100">
-                  <div class="text-emerald-600 text-xs font-semibold mb-1">
-                    LONGEVITY
-                  </div>
+                  <div class="text-emerald-600 text-xs font-semibold mb-1">LONGEVITY</div>
                   <div class="font-semibold">200–300+ years</div>
-                  <div class="text-xs text-stone-500 mt-1">
-                    Some specimens 500+ years old (Nixon, 2002)
-                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Some specimens 500+ years old (Nixon, 2002)</div>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-stone-100">
-                  <div class="text-emerald-600 text-xs font-semibold mb-1">
-                    WILDLIFE VALUE
-                  </div>
+                  <div class="text-emerald-600 text-xs font-semibold mb-1">WILDLIFE VALUE</div>
                   <div class="font-semibold">Exceptional</div>
-                  <div class="text-xs text-stone-500 mt-1">
-                    Acorns feed 100+ species (California Oak Foundation, 2026)
-                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Acorns feed 100+ species (California Oak Foundation, 2026)</div>
                 </div>
               </div>
             </div>
@@ -410,10 +395,9 @@
               </div>
               <p class="text-sm text-stone-600">
                 USDA Zones 8–10. Thrives in Mediterranean climates with hot, dry
-                summers and cool, wet winters (Calscape, 2026; USDA NRCS, 2026).
-                Tolerates occasional frost but protect young trees from hard
-                freezes. In San Diego County, it excels in inland valleys like
-                Harbison Canyon.
+                summers and cool, wet winters (Calscape, 2026; USDA NRCS, 2026). Tolerates occasional frost but
+                protect young trees from hard freezes. In San Diego County, it
+                excels in inland valleys like Harbison Canyon.
               </p>
             </div>
 
@@ -424,9 +408,8 @@
               </div>
               <p class="text-sm text-stone-600">
                 Full sun to partial shade. Young trees benefit from afternoon
-                shade in very hot inland areas (Calscape, 2026). Mature trees
-                prefer full sun for best canopy development and acorn
-                production.
+                shade in very hot inland areas (Calscape, 2026). Mature trees prefer full sun for
+                best canopy development and acorn production.
               </p>
             </div>
 
@@ -437,10 +420,9 @@
               </div>
               <p class="text-sm text-stone-600">
                 Very low once established (after 3–5 years). Water deeply but
-                infrequently during the first few summers (Calscape, 2026).
-                Avoid summer irrigation in mature trees — it can lead to root
-                rot and oak decline (California Oak Foundation, 2026). Mulch
-                heavily to retain moisture and keep roots cool.
+                infrequently during the first few summers (Calscape, 2026). Avoid summer
+                irrigation in mature trees — it can lead to root rot and oak
+                decline (California Oak Foundation, 2026). Mulch heavily to retain moisture and keep roots cool.
               </p>
             </div>
           </div>
@@ -454,8 +436,8 @@
               <p class="text-sm text-stone-600">
                 Extremely adaptable. Prefers well-draining soils but tolerates
                 clay, sand, and decomposed granite (as seen with my first oak)
-                (Calscape, 2026). Slightly acidic to neutral pH is ideal. Avoid
-                compacted or poorly drained sites.
+                (Calscape, 2026). Slightly acidic to neutral pH is ideal. Avoid compacted or
+                poorly drained sites.
               </p>
             </div>
 
@@ -466,10 +448,10 @@
               </div>
               <p class="text-sm text-stone-600">
                 Low fertility requirements. Excessive nitrogen promotes weak
-                growth and increases susceptibility to pests (California Oak
-                Foundation, 2026). A light application of slow-release,
-                low-nitrogen fertilizer in spring is sufficient for young trees.
-                Mature trees rarely need supplemental feeding.
+                growth and increases susceptibility to pests (California Oak Foundation, 2026). A light
+                application of slow-release, low-nitrogen fertilizer in spring
+                is sufficient for young trees. Mature trees rarely need
+                supplemental feeding.
               </p>
             </div>
 
@@ -480,10 +462,10 @@
               </div>
               <p class="text-sm text-stone-600">
                 Prune in summer (July–September) to minimize disease risk
-                (Calscape, 2026). Remove only dead, damaged, or crossing
-                branches. Avoid heavy pruning on mature trees. Keep the root
-                zone (drip line + 50%) free of turf, ivy, or aggressive
-                groundcovers that compete for water.
+                (Calscape, 2026). Remove only dead, damaged, or crossing branches. Avoid heavy
+                pruning on mature trees. Keep the root zone (drip line + 50%)
+                free of turf, ivy, or aggressive groundcovers that compete for
+                water.
               </p>
             </div>
           </div>
@@ -498,8 +480,7 @@
             <span class="text-amber-700"
               >Avoid summer watering on established trees. Overwatering is one
               of the leading causes of oak decline and Sudden Oak Death
-              susceptibility in California (California Oak Foundation,
-              2026).</span
+              susceptibility in California (California Oak Foundation, 2026).</span
             >
           </div>
         </div>
@@ -522,8 +503,8 @@
         <div class="prose max-w-none mb-8 text-[15px]">
           <p>
             Oaks are primarily propagated by seed (acorns). While other methods
-            exist, they are rarely used for native species (Nixon, 2002). Here
-            is a complete breakdown:
+            exist, they are rarely used for native species (Nixon, 2002). Here is a complete
+            breakdown:
           </p>
         </div>
 
@@ -636,10 +617,10 @@
             Note: While air layering is theoretically possible on young,
             vigorous shoots of <em>Quercus agrifolia</em>, it is
             <strong>not a practical or reliable propagation method</strong>
-            (Nixon, 2002). Oaks have a strong taproot and poor adventitious root
-            formation, making layering and cuttings generally unsuccessful. Seed
-            (acorn) propagation remains by far the most successful and commonly
-            used method for native California oaks.
+            (Nixon, 2002). Oaks have a strong taproot and poor adventitious root formation,
+            making layering and cuttings generally unsuccessful. Seed (acorn)
+            propagation remains by far the most successful and commonly used
+            method for native California oaks.
           </div>
         </div>
       </div>
@@ -896,28 +877,19 @@
 
       <!-- References -->
       <div class="mt-16 text-xs text-stone-500 border-t border-stone-200 pt-6">
-        <div class="font-medium mb-2 text-stone-600">References</div>
+        <div class="font-medium mb-2 text-stone-600">
+          References
+        </div>
         <div class="grid md:grid-cols-2 gap-x-8 text-[10px] leading-snug">
           <div>
-            Calscape. (2026). <em>Quercus agrifolia</em> (Coast live oak).
-            California Native Plant Society.
-            https://calscape.org/Quercus-agrifolia-(Coast-Live-Oak)<br /><br />
-            California Oak Foundation. (2026).
-            <em>Care of California’s native oaks</em>.
-            https://www.californiaoaks.org/<br /><br />
-            Nixon, K. C. (2002). The oak (Quercus) biodiversity of California
-            and adjacent regions.
-            <em>USDA Forest Service General Technical Report</em>, PSW-GTR-184,
-            3–20.
+            Calscape. (2026). <em>Quercus agrifolia</em> (Coast live oak). California Native Plant Society. https://calscape.org/Quercus-agrifolia-(Coast-Live-Oak)<br /><br />
+            California Oak Foundation. (2026). <em>Care of California’s native oaks</em>. https://www.californiaoaks.org/<br /><br />
+            Nixon, K. C. (2002). The oak (Quercus) biodiversity of California and adjacent regions. <em>USDA Forest Service General Technical Report</em>, PSW-GTR-184, 3–20.
           </div>
           <div>
-            USDA NRCS. (2026). <em>Quercus agrifolia</em> Neé. PLANTS Database.
-            https://plants.usda.gov/<br /><br />
-            Native Plant Network. (2026).
-            <em>Propagation protocol for Quercus agrifolia</em>.
-            https://npn.rngr.net/<br /><br />
-            Personal observation and documentation from Harbison Canyon, San
-            Diego County, California (2023–2026).
+            USDA NRCS. (2026). <em>Quercus agrifolia</em> Neé. PLANTS Database. https://plants.usda.gov/<br /><br />
+            Native Plant Network. (2026). <em>Propagation protocol for Quercus agrifolia</em>. https://npn.rngr.net/<br /><br />
+            Personal observation and documentation from Harbison Canyon, San Diego County, California (2023–2026).
           </div>
         </div>
       </div>
@@ -934,9 +906,10 @@
           >
         </div>
         <div class="flex items-center gap-x-4">
-          <a href="#" class="hover:text-white transition-colors"
-            >Download PDF</a
-          >
+          <button onclick="downloadPDF()" 
+                  class="hover:text-white transition-colors bg-transparent border-none text-emerald-200 hover:text-white cursor-pointer">
+            Download PDF
+          </button>
           <span class="text-emerald-700">|</span>
           <span>Tommy 0x2a • Harbison Canyon, CA</span>
         </div>
@@ -978,25 +951,15 @@
     </script>
 
     <!-- Hang Glider Cursor -->
-    <img
-      id="hangGlider"
-      src="hang_glider_PNG10.png"
-      style="
-        position: fixed;
-        width: 150px;
-        height: auto;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.08s ease-out;
-        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
-      "
-      alt="Hang Glider"
-    />
+    <img id="hangGlider" 
+         src="hang_glider_PNG10.png" 
+         style="position: fixed; width: 150px; height: auto; pointer-events: none; z-index: 9999; transition: transform 0.08s ease-out; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));"
+         alt="Hang Glider">
 
     <script>
       // Hang Glider Cursor Follower (non-intrusive addition)
-      (function () {
-        const glider = document.getElementById("hangGlider");
+      (function() {
+        const glider = document.getElementById('hangGlider');
         if (!glider) return;
 
         let mouseX = window.innerWidth / 2;
@@ -1022,22 +985,18 @@
           requestAnimationFrame(animateGlider);
         }
 
-        document.addEventListener("mousemove", (e) => {
+        document.addEventListener('mousemove', (e) => {
           mouseX = e.clientX;
           mouseY = e.clientY;
         });
 
         // Touch support
-        document.addEventListener(
-          "touchmove",
-          (e) => {
-            if (e.touches.length > 0) {
-              mouseX = e.touches[0].clientX;
-              mouseY = e.touches[0].clientY;
-            }
-          },
-          { passive: true },
-        );
+        document.addEventListener('touchmove', (e) => {
+          if (e.touches.length > 0) {
+            mouseX = e.touches[0].clientX;
+            mouseY = e.touches[0].clientY;
+          }
+        }, { passive: true });
 
         animateGlider();
 
@@ -1045,11 +1004,9 @@
         let bob = 0;
         setInterval(() => {
           bob = Math.sin(Date.now() / 380) * 2.2;
-          const current = glider.style.transform || "";
-          if (current.includes("rotate")) {
-            glider.style.transform =
-              current.replace(/translateY\([^)]*\)/, "") +
-              ` translateY(${bob}px)`;
+          const current = glider.style.transform || '';
+          if (current.includes('rotate')) {
+            glider.style.transform = current.replace(/translateY\([^)]*\)/, '') + ` translateY(${bob}px)`;
           } else {
             glider.style.transform = `translateY(${bob}px)`;
           }
@@ -1063,5 +1020,60 @@
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
     ></script>
+
+    <!-- PDF Generation Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+      // Download PDF Function
+      async function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'mm', 'a4');
+        
+        const page = document.body;
+        
+        // Show loading message
+        const originalText = event.target.innerHTML;
+        event.target.innerHTML = 'Generating PDF...';
+        event.target.disabled = true;
+
+        try {
+          const canvas = await html2canvas(page, {
+            scale: 2,
+            useCORS: true,
+            logging: false
+          });
+
+          const imgData = canvas.toDataURL('image/png');
+          const pageWidth = doc.internal.pageSize.getWidth();
+          const pageHeight = doc.internal.pageSize.getHeight();
+          
+          const imgWidth = pageWidth;
+          const imgHeight = (canvas.height * pageWidth) / canvas.width;
+          
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+
+          while (heightLeft >= 0) {
+            position = heightLeft - imgHeight;
+            doc.addPage();
+            doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+          }
+
+          doc.save('My_Favorite_Plant_Coast_Live_Oak.pdf');
+        } catch (error) {
+          alert('Sorry, there was an error generating the PDF. Please try again.');
+          console.error(error);
+        } finally {
+          event.target.innerHTML = originalText;
+          event.target.disabled = false;
+        }
+      }
+    </script>
   </body>
 </html>
